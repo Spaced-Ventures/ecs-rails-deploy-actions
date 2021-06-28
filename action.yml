@@ -1,0 +1,15 @@
+name: 'Rails deployment actions on ECS.'
+description: 'Run db migration and deploy on ECR.'
+branding:
+  icon: 'cloud'
+  color: 'orange'
+inputs:
+  aws_region:
+    description: 'AWS Region'
+    required: true
+  aws_resource_prefix:
+    description: 'AWS resource prefix.'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
