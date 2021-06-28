@@ -112,9 +112,6 @@ async function deployServices(ecs, params){
 }
 
 async function run() {
-  process.env['INPUT_AWS_REGION'] = 'us-east-2'
-  process.env['INPUT_AWS_RESOURCE_PREFIX'] = 'spaced-prod'
-
   const region = core.getInput("aws_region", { required: true });
   const resourcePrefix = core.getInput("aws_resource_prefix", { required: true });
   const params = {
